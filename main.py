@@ -8,20 +8,19 @@ from sklearn.metrics import accuracy_score
 df = pd.read_csv('data/diabetes.csv')
 
 df['Glucose'] = df['Glucose'].replace(0, np.nan) # if there is a 0 that that will be replaced with the avarege 
-df['Glucose'] = df['Glucose'].fillna(df['Glucose'].mean())
+df['Glucose'] = df['Glucose'].fillna(df['Glucose'].median())
 
 df['BloodPressure'] = df['BloodPressure'].replace(0, np.nan)
-df['BloodPressure'] = df['BloodPressure'].fillna(df['BloodPressure'].mean())
+df['BloodPressure'] = df['BloodPressure'].fillna(df['BloodPressure'].median())
 
 df['SkinThickness'] = df['SkinThickness'].replace(0, np.nan)
-df['SkinThickness'] = df['SkinThickness'].fillna(df['SkinThickness'].mean())
+df['SkinThickness'] = df['SkinThickness'].fillna(df['SkinThickness'].median())
 
 df['Insulin'] = df['Insulin'].replace(0, np.nan)
-df['Insulin'] = df['Insulin'].fillna(df['Insulin'].mean())
+df['Insulin'] = df['Insulin'].fillna(df['Insulin'].median())
 
 df['BMI'] = df['BMI'].replace(0, np.nan)
-df['BMI'] = df['BMI'].fillna(df['BMI'].mean())
-
+df['BMI'] = df['BMI'].fillna(df['BMI'].median())
 
 X = df[['BMI', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'Pregnancies', 'DiabetesPedigreeFunction', 'Age']] #everything except the outcome
 y = df['Outcome'] # Outcome
