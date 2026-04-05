@@ -34,8 +34,8 @@ model = RandomForestClassifier(
     n_estimators=200,
     max_depth=5,
     random_state=42,
-    class_weight='balanced'
-) # if you have unbalanced data you can use that to balance it
+    class_weight='balanced' # if you have unbalanced data you can use that to balance it
+) 
 
 model.fit(X_train, y_train)
 
