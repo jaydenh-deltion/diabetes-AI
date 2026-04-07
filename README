@@ -1,0 +1,25 @@
+## Diabetes AI — Early Detection Tool
+
+# What does the app do and why did I build it?
+
+# Why did I build it?
+
+I built the Diabetes Predictor because I wanted to create something meaningful for healthcare and help reduce the pressure on medical professionals. I come from a nursing background myself, and from the very beginning I have wanted to build tools that help people who need care, as well as nurses, doctors, and other caregivers — making their work easier so they experience less stress and pressure, and hopefully have more time to build a personal connection with their patients instead of constantly rushing from one to the next.
+I also find machine learning fascinating and wanted to learn more about it, so this felt like the perfect project to get my hands dirty and start understanding how machine learning works and what it can do.
+
+# What does the app do?
+
+The app contains multiple input fields where a nurse or caregiver can enter a patient's medical values. Based on a trained machine learning model, the app predicts the likelihood that the patient has diabetes. I have tried to make the app as user-friendly as possible for people without technical knowledge, so that anyone can use it.
+
+# What do you need to run the app?
+
+pip install pandas numpy streamlit scikit-learn
+streamlit run app.py
+This will install all required dependencies. The app will then open automatically in your browser at localhost.
+
+# Limitations
+
+Unfortunately there are a number of limitations. The dataset I used is relatively small — only 768 patients — which made it difficult to achieve high accuracy. 77% is the highest I was able to reach. Additionally, the dataset contains only female patient data, which means the model is less accurate for male patients.
+
+# Future plans
+I am going to look for a larger dataset that includes both male and female patients, so that the model is accurate for everyone. The goal is to improve the overall accuracy of the model so that it can be used more effectively in real healthcare settings.

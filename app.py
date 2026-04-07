@@ -4,7 +4,8 @@ import pandas as pd
 
 def main():
     st.title("Diabetes AI")
-    st.write("This is a simple app that uses a random forest classifier to predict whether or not a person has diabetes based on their health data.") 
+    st.write("This is a simple app to predict whether or not a person has diabetes based on their health data.")
+    st.write("note this is a AI and it can make mistakes so if you are in doubt go to a dockter!)") 
 
     Glucose = st.number_input("Please enter the Glucose level:")
     BloodPressure = st.number_input("Please enter the Blood Pressure level:")
@@ -24,4 +25,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 # streamlit run app.py
