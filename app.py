@@ -19,7 +19,8 @@ def main():
     if st.button("Predict Diabetes"):
         df = pd.DataFrame([[BMI,Glucose, BloodPressure, SkinThickness, Insulin, Pregnancies, DiabetesPedigreeFunction, Age ]], columns=['BMI','Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'Pregnancies', 'DiabetesPedigreeFunction', 'Age'])
         prediction = model.predict_proba(df)
-        st.write(prediction)
+        prediction = round(prediction[0][1] * 100)
+        st.write(f"This patient has a %{prediction} chance of diabetes. Please consult a doctor.") 
 
 if __name__ == "__main__":
     main()

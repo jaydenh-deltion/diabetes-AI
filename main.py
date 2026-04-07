@@ -43,6 +43,8 @@ y_pred = model.predict(X_test)
 
 score = accuracy_score(y_test, y_pred)
 
+print(df[df['Outcome'] == 1].head(3)) 
+print(df[df['Outcome'] == 0].head(3))
 
 print(score)
 print(y.value_counts())
