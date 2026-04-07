@@ -21,7 +21,11 @@ def main():
         df = pd.DataFrame([[BMI,Glucose, BloodPressure, SkinThickness, Insulin, Pregnancies, DiabetesPedigreeFunction, Age ]], columns=['BMI','Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'Pregnancies', 'DiabetesPedigreeFunction', 'Age'])
         prediction = model.predict_proba(df)
         prediction = round(prediction[0][1] * 100)
-        st.write(f"This patient has a %{prediction} chance of diabetes. Please consult a doctor.") 
+        
+        if prediction > 15: 
+            st.write(f"the change of diabetes is {prediction}% we recommend you to see a docter!")
+        else:
+            st.write("The change that you have diabetes is low. But that will not say that you cant get it. ")
 
 if __name__ == "__main__":
     main()
